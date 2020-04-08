@@ -8,8 +8,8 @@ REGION="eu-west-1"
 RETENTION=6
 SNAP_CREATION=/home/ec2-user/oshaikh/pinak/snap_creation
 SNAP_DELETION=/home/ec2-user/oshaikh/pinak/snap_deletion
-EMAIL_LIST="omer.shaikh@careem.com, m.kamran@careem.com, pinak.kakadiya@careem.com"
-#EMAIL_LIST="omer.shaikh@careem.com"
+EMAIL_LIST="abc@xyz.com"
+
 echo "List of Snapshots Creation Status" > $SNAP_CREATION
 echo "List of Snapshots Deletion Status" > $SNAP_DELETION
 # Check whether the volumes list file is available or not?
@@ -78,4 +78,4 @@ cat $SNAP_CREATION $SNAP_DELETION > /home/ec2-user/oshaikh/pinak/mail_report
 
 # Sending the mail Update
 
-cat /home/ec2-user/oshaikh/pinak/mail_report | mail -s "Volume Snapshots Status" -S "from=omer.shaikh@careem.com"  $EMAIL_LIST
+cat /home/ec2-user/oshaikh/pinak/mail_report | mail -s "Volume Snapshots Status" -S "from=abc@xyz.com"  $EMAIL_LIST
